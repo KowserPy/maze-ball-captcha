@@ -56,7 +56,7 @@ const HoldToStart: React.FC<HoldToStartProps> = ({ onStart }) => {
 	}, []);
 
 	return (
-		<div className="flex flex-col items-center space-y-6">
+		<div className="flex flex-col items-center space-y-6 border rounded-xl p-5">
 			<div className="relative">
 				<motion.button
 					className={`
@@ -109,6 +109,11 @@ const HoldToStart: React.FC<HoldToStartProps> = ({ onStart }) => {
 						/>
 					</svg>
 				</motion.button>
+			</div>
+			<div className="text-center mb-4">
+				<p className="text-gray-300 text-sm">
+					Hold the button for {HOLD_DURATION / 1000} seconds to start the maze
+				</p>
 			</div>
 		</div>
 	);

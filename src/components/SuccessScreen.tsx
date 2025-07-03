@@ -15,14 +15,17 @@ const SuccessScreen = () => {
 				transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
 				className="mb-6"
 			>
-				<ShieldCheck className="w-30 h-30 text-green-400 mx-auto" />
+				<ShieldCheck className="w-16 h-16 text-green-400 mx-auto" />
 			</motion.div>
-			<div className="flex items-center justify-center mb-2">
-				<span className="text-green-400 font-semibold">Verification Complete</span>
-			</div>
-			<div className="text-xs text-gray-300 break-all font-mono bg-slate-800/50 p-2 rounded">
-				<p>Now you are eligible for Quiz!</p>
-			</div>
+
+			<motion.p
+				initial={{ opacity: 0, y: 20 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ delay: 0.4 }}
+				className="text-green-400 font-semibold mb-8"
+			>
+				You have successfully completed the verification
+			</motion.p>
 		</motion.div>
 	);
 };
