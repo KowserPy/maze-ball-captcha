@@ -77,6 +77,7 @@ const MazeGameContainer: React.FC<MazeGameContainerProps> = ({ walletAddress }) 
 					},
 					body: JSON.stringify({
 						userId: user.id,
+						username: user.username,
 						solutionPath,
 						timestamp: Date.now(),
 						checkpoints: trackingData.checkpoints,
